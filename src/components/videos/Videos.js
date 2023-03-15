@@ -21,7 +21,7 @@ export default function Videos() {
     content = <Error />;
   }
   if (!isLoading && !isError && videos.length > 0) {
-    content = videos.map((video) => <Video video={video} />);
+    content = videos.map((video) => <Video key={video.id} video={video} />);
   }
   if (!isLoading && !isError && videos.length === 0) {
     content = <p>No Video Found</p>;
